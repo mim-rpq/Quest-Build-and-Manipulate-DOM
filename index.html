@@ -22,6 +22,7 @@
                         'donate-and-blog': '#B4F461',
                         'header': '#F9F7F3',
                         'gray-color': '#585858',
+                        'black-back': '#000000',
                     },
 
                     fontFamily: {
@@ -31,6 +32,11 @@
             }
         }
     </script>
+    <style>
+        .mod {
+            left: calc(50% - 220px);
+        }
+    </style>
 </head>
 
 <body class="font-lexend ">
@@ -64,15 +70,16 @@
 
     <!-- main sectin Start  -->
     <main class="container mx-auto  ">
-        <div id="backdrop-container" class="backdrop hidden"></div>
-        <div id="modal-container" class="mod flex flex-col justify-center items-center space-y-4 py-8 hidden">
+        <div id="backdrop-container"
+            class="backdrop hidden bg-black-back bg-opacity-50 min-h-screen fixed top-0 w-full z-20"></div>
+        <div id="modal-container" class=" fixed bg-white rounded-lg top-52 w-[450px] p-3 mod z-50 flex flex-col justify-center items-center  space-y-4 py-9 hidden">
             <h1 class="font-bold text-2xl">Congrats!</h1>
             <img src="assets/coin.png" alt="">
             <p>You have donated for maankind</p>
             <p class="font-bold text-xl">Successfully</p>
             <button id="close-confirm" class="btn  text-md">Close Confirmation</button>
         </div>
-        
+
         <!-- donation box  -->
 
 
@@ -166,7 +173,7 @@
             </div>
 
         </div>
-       
+
 
         <div id="history-container" class=" hidden container mx-auto m-10 my-7">
 
